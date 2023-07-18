@@ -1,0 +1,44 @@
+{%  extends 'base.html'%}
+{%block head%}
+<style>
+    .con{
+    width:100%;
+    height:500px;
+    
+    background-image: url("{{ url_for('static', filename='images/product_movement.jpeg') }}");
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    </style>
+{%endblock%}
+{%block content%}
+<h1 class="head">PRODUCT MOVEMENT</h1>
+<div class="con"></div>
+<br>
+<br>
+<div class="aev">
+
+    <div>
+<a href="#add">ADD</a><br><br>
+<form action="/productmovement/add" method="POST">
+<input type="text" name="mov_id " id="mov_id " placeholder="pro_movement_id "><br><br>
+<input type="datetime-local" name="timestamp" id="timestamp" placeholder="time stamp"><br><br>
+<input type="text" name="from_location_id " id="from_location_id " placeholder="from_location_id "><br><br>
+<input type="text" name="to_location_id " id="to_location_id" placeholder="to_location_id "><br><br>
+<input type="text" name="product_id " id="product_id " placeholder="product_id"><br><br>
+<input type="text" name="qty " id="qty" placeholder="quantity"><br><br>
+
+<input type="submit" value="Add" class="btn">
+</form>
+</div>
+<div>
+    <a href="">EDIT</a><br><br>
+    <form action="" method="POST">
+        <input type="text" name="name" id="name" placeholder="Location_Name"><br><br>
+        
+        <input type="submit" value="Edit" class="btn">
+        </form></div>
+        <br>
+    <div><a href="">VIEW</a></div></div>
+
+{%endblock%}

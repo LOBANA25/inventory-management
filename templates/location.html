@@ -1,0 +1,57 @@
+{%  extends 'base.html'%}
+{%block head%}
+<style>
+    .con{
+    width:100%;
+    height:500px;
+    
+    background-image: url("{{ url_for('static', filename='images/location.jpeg') }}");
+    background-repeat: no-repeat;
+    background-size:cover;
+    }
+    </style>
+{%endblock%}
+
+{%block content%}
+<h1 class="head">LOCATION</h1>
+<div class="con">
+ <!--<img src="{{url_for('static',filename='images/product.jpg')}}" class=".con">--> 
+</div>
+<br>
+<br><div class="aev">
+    
+    <div>
+<a href="#add">ADD</a><br><br>
+<form action="/location/add" method="POST">
+<input type="text" name="id" id="id" placeholder="Location_ID"><br><br>
+<input type="text" name="name" id="name" placeholder="Location_Name"><br><br>
+<input type="submit" value="Add" class="btn">
+</form>
+
+</div>
+<div>
+<a href="">EDIT</a><br><br>
+<form action="" method="POST">
+    <input type="text" name="name" id="name" placeholder="Location_Name"><br><br>
+    
+    <input type="submit" value="Edit" class="btn">
+    </form></div>
+    <br>
+<div><a href="">VIEW</a></div></div>
+
+<table>
+    <tr>
+    <th>LOCATION_ID</th>
+    <th>LOCATION_NAME</th>
+    </tr>
+    
+        {%for loc in locations%}
+        <tr>
+        <td>{{loc.location_id}}</td>
+        <td>{{loc.location_names}}</td>
+     
+    </tr>
+        {% endfor%}
+    
+</table><br><br>
+{%endblock%}

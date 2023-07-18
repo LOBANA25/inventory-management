@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    
+    {%block head%}{% endblock%}
+</head>
+<body>
+    <div>
+        <span class="logo">SPOTRIX</span>
+    </div>
+    <div id="sidenav">
+    <nav>
+
+        
+        <ul class="right-nav">
+        <li><a href='/home'>HOME</a></li>
+        <li><a href='/product'>PRODUCT</a></li>
+        <li><a href='/location'>LOCATION</a></li>
+        <li><a href='/productmovement'>MOVEMENT</a></li>
+        <li><a href='/report'>REPORT</a></li>
+        </ul>
+      
+    
+    </nav>
+</div>
+    <div id="menubtn">
+        <img src= "{{url_for('static', filename='/images/menu.png')}}" id="menu">
+    </div>
+    </header>
+    
+    {%block content%}{%endblock%}
+    <script>
+        var menubtn = document.getElementById("menubtn")
+        var sidenav = document.getElementById("sidenav")
+        var menu = document.getElementById("menu")
+        
+        sidenav.style.right="-250px";
+        
+        menubtn.onclick=function()
+        {
+            if(sidenav.style.right=="-250px"){
+                sidenav.style.right="0";
+                menu.src="{{url_for('static', filename='/images/close.png')}}";
+            }
+            else{
+                sidenav.style.right="-250px";
+                menu.src="{{url_for('static', filename='/images/menu.png')}}";
+            }
+        }
+    </script>
+  
+</body>
+</html>
