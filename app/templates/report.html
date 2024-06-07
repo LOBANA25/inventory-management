@@ -1,0 +1,62 @@
+{%  extends 'base.html'%}
+{%block title%}report{%endblock%}
+{%block head%}
+<style>
+    /* Table styles */
+    .table-container {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .table th,
+    .table td {
+        padding: 8px;
+        border-bottom: 1px solid #dee2e6;
+        text-align: left;
+    }
+    .table th {
+        background-color: #f8f9fa;
+    }
+    .btn btn-primary mb-3 
+    {
+        background-color: #d3b2b2;
+        display:inline-flexbox;
+    }
+</style>
+{%endblock%}
+{%block content%}
+<div class="content">
+    <div class="container">
+        <h1>Report</h1>
+        <a href="/download" class="btn btn-primary mb-3 float-end">Download</a>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                        <th>Location ID</th>
+                        <th>Location Name</th>
+                        <th>Total Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in report_data %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{%endblock%}

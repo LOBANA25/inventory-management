@@ -1,0 +1,71 @@
+{%extends 'base.html'%}
+{%block title%}add_movements{%endblock%}
+{%block head%}
+    <style>
+        /* Form styles */
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-submit {
+            background-color: #d3b2b2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #d3b2b2;
+        }
+    </style>
+{%endblock%}
+{%block content%}
+<div class="content">
+    <div class="container">
+        <div class="form-container">
+            <h2>Add Movement</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label class="form-label" for="movement_id">Movement ID:</label>
+                    <input type="text" class="form-control" id="movement_id" name="movement_id" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="from_location">From Location:</label>
+                    <input type="text" class="form-control" id="from_location" name="from_location" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="to_location">To Location:</label>
+                    <input type="text" class="form-control" id="to_location" name="to_location" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="product_id">Product ID:</label>
+                    <input type="text" class="form-control" id="product_id" name="product_id" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="qty">Quantity:</label>
+                    <input type="number" class="form-control" id="qty" name="qty" required>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    </div>
+{%endblock%}

@@ -1,0 +1,78 @@
+{%  extends 'base.html'%}
+{%block title%}add_edit_product{%endblock%}
+
+
+{%block content%}
+    <div class="container">
+        <div class="form-container" id="formContainer">
+            <h2 id="formTitle">Add</h2>
+            <form id="form" method="post">
+                <div class="form-group">
+                    <label class="form-label" for="product_id">Product ID:</label>
+                    <input type="text" class="form-control" id="product_id" name="product_id" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <button type="submit" class="btn btn-submit" id="submitButton">Add</button>
+               
+            </form>
+        </div>
+        <div class="form-container" id="formContainer">
+            <h2 id="formTitle">Edit</h2>
+            <form id="form" method="post">
+                <div class="form-group">
+                    <label class="form-label" for="product_id">Product ID:</label>
+                    <input type="text" class="form-control" id="product_id" name="product_id" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <button type="submit" class="btn btn-submit" id="submitButton">Edit</button>
+               
+            </form>
+        </div>
+        
+    </div>
+
+    <script>
+        /*
+        // Function to show add form
+        function showAddForm() {
+            document.getElementById('formTitle').innerText = 'Add Product';
+            document.getElementById('productForm').setAttribute('action', '/add_product');
+            document.getElementById('product_id').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('submitButton').innerText = 'Add';
+            document.getElementById('cancelButton').style.display = 'inline-block';
+            document.getElementById('addButton').style.display = 'none';
+            document.getElementById('formContainer').style.display = 'block';
+        }
+
+        // Function to show edit form
+        function showEditForm(productId, productName) {
+            document.getElementById('formTitle').innerText = 'Edit Product';
+            document.getElementById('productForm').setAttribute('action', '/edit_product/' + productId);
+            document.getElementById('product_id').value = productId;
+            document.getElementById('name').value = productName;
+            document.getElementById('submitButton').innerText = 'Edit';
+            document.getElementById('cancelButton').style.display = 'inline-block';
+            document.getElementById('addButton').style.display = 'none';
+            document.getElementById('formContainer').style.display = 'block';
+        }
+
+        // Function to hide the form
+        function hideForm() {
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('addButton').style.display = 'inline-block';
+        }
+
+        // Event listener for Add button click
+        document.getElementById('submitButton').addEventListener('click', showAddForm);
+
+        // Event listener for Cancel button click
+        document.getElementById('cancelButton').addEventListener('click', hideForm);*/
+    </script>
+{%endblock%}

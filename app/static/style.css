@@ -1,0 +1,223 @@
+
+.logo { 
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-style: oblique;
+    padding: 20px;
+    background-color: #d3b2b2;
+}
+/* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #d3b2b2;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Style sidebar links */
+  .sidebar a {
+    padding: 10px 12px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #060606;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+
+  
+  /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+.content {
+    margin-left: 250px; 
+    padding: 20px;
+}
+
+        /* Form styles */
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 100px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            
+        }
+        .btn-submit {
+            background-color: #d3b2b2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-submit:hover {
+            background-color: #db9090;
+        }
+    
+
+
+
+/* *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+}
+body{
+    /*background-image: linear-gradient(rgba(10, 41, 243, 0), rgba(79, 0, 128, 0.334));/
+    height: 110vh;
+}
+header{
+    width:100%;   
+}
+nav{
+    width:100%;
+    margin:10px;
+    padding:10px;
+    display:flex;
+    justify-content:space-between;
+}
+
+li{
+    font-size:larger;
+    display:flex;
+    padding-bottom:45px;
+}
+.right-nav{
+    margin-top:50px;
+}
+a{
+    color:rgb(249, 251, 251);
+    font-weight: bold;
+    font-family: sans-serif;
+    
+}
+a:hover{
+    background-color:rgba(116, 0, 166, 0.405) ;
+    border-radius: 10px;
+    cursor: pointer;
+    padding:10px;
+}
+
+.logo
+{
+   float:left;
+    font-weight:bolder;
+    font-size:20px;
+    letter-spacing:1px;
+    font-style:oblique ;
+}
+.head{
+    text-align: center;
+    margin:30px;
+}
+.con{
+    width:100%;
+    text-align:center;
+    padding:100px;
+    background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(124, 2, 255, 0.334));
+}
+    .aev{
+    display:flex;
+    flex-direction: row;
+}
+.aev div{
+    padding-left: 175px;
+}.btn{
+    margin-left: 30px;
+}
+.aev a{
+    color:rgb(39, 0, 75);
+    margin-left: 60px;
+}
+p{
+    padding:5px;
+    font-size:25px;   
+}
+#ln1, #ln3{
+    color:rgb(142, 114, 188);
+    font-size:50px;
+}
+#ln2{
+    font-weight: bolder;
+    color: rgb(83, 18, 144);
+}
+
+#sidenav{
+    width: 180px;
+    height: 100vh;
+    position:fixed;
+    right: 0;
+    top:0;
+    background: #d0a1f2;
+    z-index: 2;
+    transition: 0.5s;
+}
+#menubtn{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #d0a1f2;
+    position: fixed;
+    right:30px;
+    top:20px;
+    border-radius: 3px;
+    z-index:3;
+    cursor:pointer;
+}
+#menubtn img{
+    width: 25px;
+    margin-top: 10px;
+}
+.btn{
+ border-radius: 25px;
+ color:rgb(253, 252, 252);
+ width:100px;
+ padding:5px;
+ font-size: 15px;
+ background-color: rgb(2, 221, 255);
+ border:none;
+}
+table{
+    margin-left: auto;
+  margin-right: auto;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:5px;
+    text-align: center;
+}
+tr:nth-child(even) {
+    background-color:  rgba(2, 221, 255, 0.1); 
+} */

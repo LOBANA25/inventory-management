@@ -1,0 +1,60 @@
+{%  extends 'base.html'%}
+{%block title%}movements{%endblock%}
+{%block head%}
+<style>
+
+        .table-container {
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th,
+        .table td {
+            padding: 8px;
+            border-bottom: 1px solid #dee2e6;
+            text-align: left;
+        }
+        .table th {
+            background-color: #f8f9fa;
+        }
+    </style>
+
+{%endblock%}
+{%block content%}
+<!-- movement.html -->
+
+  <div class="content">
+    <div class="container">
+        <h1>Movement Views</h1>
+        <a href="/add_movement" class="btn btn-primary mb-3">Add Movement</a>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Movement ID</th>
+                        <th>From Location</th>
+                        <th>To Location</th>
+                        <th>Product ID</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for movement in movements %}
+                    <tr>
+                        <td>{{ movement.movement_id }}</td>
+                        <td>{{ movement.from_location }}</td>
+                        <td>{{ movement.to_location }}</td>
+                        <td>{{ movement.product_id }}</td>
+                        <td>{{ movement.qty }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{%endblock%}
